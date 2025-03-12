@@ -1,4 +1,14 @@
-[gd_scene format=3 uid="uid://bdrdmx2p62jnx"]
+[gd_scene load_steps=2 format=3 uid="uid://bdrdmx2p62jnx"]
+
+[ext_resource type="Script" uid="uid://bypfmmf6e74sv" path="res://assets/scripts/morte.gd" id="1_y2iev"]
 
 [node name="Morte" type="Area2D"]
 collision_mask = 2
+script = ExtResource("1_y2iev")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

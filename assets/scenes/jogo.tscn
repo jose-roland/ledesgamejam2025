@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://xx4jwstjfahm"]
+[gd_scene load_steps=10 format=3 uid="uid://xx4jwstjfahm"]
 
 [ext_resource type="PackedScene" uid="uid://bu84kxha4aovc" path="res://assets/scenes/personagem.tscn" id="1_a6g3q"]
 [ext_resource type="Texture2D" uid="uid://c1b3xmjaygkt3" path="res://assets/sprites/spr_floor_temp.png" id="2_amepl"]
 [ext_resource type="Texture2D" uid="uid://mhsylrdijtkg" path="res://assets/sprites/spr_block_temp.png" id="3_8oj2k"]
 [ext_resource type="PackedScene" uid="uid://bdrdmx2p62jnx" path="res://assets/scenes/morte.tscn" id="4_amepl"]
+[ext_resource type="PackedScene" uid="uid://j0nk12semnj0" path="res://assets/scenes/moeda.tscn" id="5_8oj2k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a6g3q"]
 texture = ExtResource("2_amepl")
@@ -43,3 +44,11 @@ position = Vector2(90, 178)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Morte"]
 shape = SubResource("WorldBoundaryShape2D_amepl")
+
+[node name="Moedas" type="Node" parent="."]
+
+[node name="Moeda" parent="Moedas" instance=ExtResource("5_8oj2k")]
+position = Vector2(58, -24)
+
+[node name="Moeda2" parent="Moedas" instance=ExtResource("5_8oj2k")]
+position = Vector2(-100, -23)

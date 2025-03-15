@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr6knjm315sb6"]
+
+[ext_resource type="Script" uid="uid://ckdtdw3sjyll6" path="res://assets/scripts/inventory_ui.gd" id="1_0cv3p"]
+[ext_resource type="PackedScene" uid="uid://cd6w30ch0617j" path="res://assets/scenes/inventory_ui_slot.tscn" id="2_6v685"]
+
+[node name="InventoryUI" type="Control"]
+custom_minimum_size = Vector2(76, 16)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 76.0
+offset_bottom = 16.0
+script = ExtResource("1_0cv3p")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 76.0
+offset_bottom = 16.0
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 0
+offset_right = 76.0
+offset_bottom = 16.0
+columns = 4
+
+[node name="InventoryUISlot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_6v685")]
+layout_mode = 2
+
+[node name="InventoryUISlot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_6v685")]
+layout_mode = 2
+
+[node name="InventoryUISlot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_6v685")]
+layout_mode = 2
+
+[node name="InventoryUISlot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_6v685")]
+layout_mode = 2

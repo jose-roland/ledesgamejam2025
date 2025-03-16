@@ -13,13 +13,13 @@ var dash = false
 var life = 8
 var life_t = 8
 
+@onready var animated_sprite = $AnimatedSprite2D
+@onready var coyote_timer: Timer = $CoyoteTimer
 @onready var dash_timer: Timer = $DashTimer
 @onready var dash_timer_2: Timer = $DashTimer2
-@onready var animated_sprite = $AnimatedSprite2D
+@onready var project_position = $project_position
 
 @export var inventory: Inv
-
-@onready var project_position = $project_position
 
 # -----------Variavel de Estado do player para Animações ------------
 var current_state = player_states.MOVES
@@ -33,7 +33,7 @@ enum player_states{
 # --------------Função Principal -------------------------------
 func _physics_process(delta: float) -> void:
 	# Adição da Gravidade
-	if not is_on_floor():
+	if not is_on_floor() && !can_coyote_jump:
 		if dash:
 			velocity += get_gravity() * delta / 1.6 # Caso esteja no dash, a gravidade será menor. Assim o dash será quase reto.
 		else:

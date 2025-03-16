@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://ud5n1ol20k8h"]
 
-[ext_resource type="Script" path="res://assets/scripts/projectile.gd" id="1_scc3m"]
+[ext_resource type="Script" uid="uid://b54g7bcur2pyw" path="res://assets/scripts/projectile.gd" id="1_scc3m"]
 [ext_resource type="Texture2D" uid="uid://br8auqe7be12w" path="res://assets/sprites/player_sprites/poder.png" id="2_ldy4p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxf0c"]
@@ -56,4 +56,7 @@ position = Vector2(-3, 0)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_0c7x6")
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

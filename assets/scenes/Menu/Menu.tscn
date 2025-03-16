@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=4 uid="uid://b55jvxwroud42"]
 
 [ext_resource type="Script" uid="uid://ci6x5eyy3mxk4" path="res://assets/scenes/Menu/menu.gd" id="1_j4uar"]
-[ext_resource type="Texture2D" uid="uid://dq5e5qwkkq180" path="res://assets/sprites/Menu.png" id="1_urnxy"]
-[ext_resource type="Texture2D" uid="uid://bhfft073wfjcw" path="res://assets/sprites/MenuFull.png" id="2_j4uar"]
+[ext_resource type="Texture2D" uid="uid://dq5e5qwkkq180" path="res://assets/sprites/menu_sprites/Menu.png" id="1_urnxy"]
+[ext_resource type="Texture2D" uid="uid://bhfft073wfjcw" path="res://assets/sprites/menu_sprites/MenuFull.png" id="2_j4uar"]
 [ext_resource type="FontFile" uid="uid://ci5t0mehyv5oq" path="res://assets/resource/FonteJogo.tres" id="3_urnxy"]
 [ext_resource type="FontFile" uid="uid://dkuwx80ggxgj" path="res://FonteJogo.tres" id="4_c0ejk"]
 

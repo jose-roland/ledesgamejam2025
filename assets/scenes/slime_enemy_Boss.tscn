@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://cq45llx3k6xec"]
+
+[ext_resource type="Script" uid="uid://bilexl84ip1k7" path="res://assets/scripts/slime_enemy.gd" id="1_di45p"]
+[ext_resource type="Texture2D" uid="uid://cdorplck7177y" path="res://assets/sprites/enemy_sprites_boss/Boss1.png" id="2_fpogo"]
+[ext_resource type="Texture2D" uid="uid://cgt04i6ixvfg8" path="res://assets/sprites/enemy_sprites_boss/Boss2.png" id="3_g7lph"]
+[ext_resource type="Texture2D" uid="uid://bgu6lf0srtt2i" path="res://assets/sprites/enemy_sprites_boss/Boss3.png" id="4_tkst3"]
+[ext_resource type="Texture2D" uid="uid://dfp3rtohfa3w8" path="res://assets/sprites/enemy_sprites_boss/Boss4.png" id="5_0grfa"]
+[ext_resource type="Texture2D" uid="uid://b67y76yc4y2fd" path="res://assets/sprites/enemy_sprites_boss/Boss5.png" id="6_es5fk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jd7n3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fpogo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g7lph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tkst3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0grfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_es5fk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3epsm"]
+radius = 14.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k0mmc"]
+radius = 15.0
+
+[node name="slime_enemy" type="CharacterBody2D" groups=["inimigos"]]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_di45p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(18, 17)
+sprite_frames = SubResource("SpriteFrames_jd7n3")
+autoplay = "default"
+frame_progress = 0.94828
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, 18)
+shape = SubResource("CircleShape2D_3epsm")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(18, 23)
+shape = SubResource("CircleShape2D_k0mmc")
+
+[node name="RayCast_left" type="RayCast2D" parent="."]
+position = Vector2(18, 23)
+target_position = Vector2(-14, 0)
+
+[node name="RayCast_right" type="RayCast2D" parent="."]
+position = Vector2(18, 23)
+target_position = Vector2(16, 0)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

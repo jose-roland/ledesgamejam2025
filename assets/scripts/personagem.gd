@@ -5,6 +5,7 @@ const JUMP_VELOCITY = -246.0
 const DASH_SPEED = 412.0
 
 var dash = false
+var can_coyote_jump := false
 var can_dash = true
 var life = 3
 var life_t = 3
@@ -12,6 +13,7 @@ var life_t = 3
 @onready var dash_timer: Timer = $DashTimer
 @onready var dash_timer_2: Timer = $DashTimer2
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var coyote_timer: Timer = $CoyoteTimer
 
 @export var inventory: Inv
 
@@ -26,7 +28,7 @@ enum player_states{
 # --------------Função Principal -------------------------------
 func _physics_process(delta: float) -> void:
 	# Adição da Gravidade
-	if not is_on_floor():
+	if not is_on_floor() && !can_coyote_jump:
 		if dash:
 			velocity += get_gravity() * delta / 1.6 # Caso esteja no dash, a gravidade será menor. Assim o dash será quase reto.
 		else:
@@ -69,8 +71,12 @@ func movimentos():
 		animated_sprite.flip_h = true
 	
 	# Ação de Pular
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	if Input.is_action_just_pressed("jump"):
+		if is_on_floor() || can_coyote_jump:
+			velocity.y = JUMP_VELOCITY
+			
+			if can_coyote_jump:
+				can_coyote_jump = false
 		
 	# Teste para ver se o player perdeu vida, e se ele morreu.
 	if life_t != life:
@@ -79,9 +85,17 @@ func movimentos():
 		if life <= 0:
 			current_state = player_states.DEAD
 			
-	move_and_slide()
-		
+	var was_on_floor = is_on_floor()
 	
+	move_and_slide()
+	
+	if was_on_floor && !is_on_floor() && velocity.y >= 0:
+		can_coyote_jump = true
+		coyote_timer.start()
+
+func _on_coyote_timer_timeout() -> void:
+	can_coyote_jump = false
+
 #---------------Função - Dano recebido por Player ------------------
 func hit():
 	move_and_slide()

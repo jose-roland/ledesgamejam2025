@@ -4,7 +4,7 @@ extends Node2D
 @onready var Button_Start = $VBoxContainer/HBoxContainer/VBoxContainer/Button as Button
 @onready var Button_Settings = $VBoxContainer/HBoxContainer/VBoxContainer/Button2 as Button
 @onready var Button_Exit = $VBoxContainer/HBoxContainer/VBoxContainer/Button3 as Button
-@onready var Nivel1 = preload("res://assets/scenes/Nível 1.tscn") as PackedScene
+@onready var Nivel1 = preload("res://assets/scenes/Nivel_1.tscn") as PackedScene
 @onready var Settings = preload("res://assets/scenes/Menu/Configurações.tscn") as PackedScene
 
 func _ready():

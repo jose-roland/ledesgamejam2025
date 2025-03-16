@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://dp17peula583y"]
+[gd_scene load_steps=37 format=4 uid="uid://dp17peula583y"]
 
 [ext_resource type="Texture2D" uid="uid://dg1jvq17dq4ur" path="res://assets/sprites/Dirt.png" id="1_qf5iy"]
 [ext_resource type="Texture2D" uid="uid://cs7k6tuml2ru4" path="res://assets/sprites/Estalaguimite_Grande.png" id="2_yb0rn"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b64yh1d0qivol" path="res://assets/sprites/Pedras_Caverna.png" id="14_ujxqv"]
 [ext_resource type="Texture2D" uid="uid://c2aq031aan3kv" path="res://assets/sprites/Porta_Boss.png" id="15_pihwu"]
 [ext_resource type="Texture2D" uid="uid://dfuh2y00bld2c" path="res://assets/sprites/Plataforma_Centro.png" id="19_4bx3b"]
+[ext_resource type="PackedScene" uid="uid://j0nk12semnj0" path="res://assets/scenes/moeda.tscn" id="19_rwqu0"]
 [ext_resource type="Texture2D" uid="uid://bspmow4w7ebxp" path="res://assets/sprites/Plataforma_Direita.png" id="20_nwtyn"]
 [ext_resource type="Texture2D" uid="uid://c5liqt3xgi4a7" path="res://assets/sprites/Plataforma_Esquerda.png" id="21_pr1g3"]
 [ext_resource type="PackedScene" uid="uid://dyhmibrtvjqkf" path="res://assets/scenes/personagem.tscn" id="23_oopdw"]
@@ -489,3 +490,27 @@ offset_top = 21.0
 offset_right = 119.0
 offset_bottom = 37.0
 metadata/_edit_use_anchors_ = true
+
+[node name="Moeda" parent="." instance=ExtResource("19_rwqu0")]
+position = Vector2(1116, -26)
+
+[node name="Moeda2" parent="." instance=ExtResource("19_rwqu0")]
+position = Vector2(1092, -26)
+
+[node name="Moeda3" parent="." instance=ExtResource("19_rwqu0")]
+position = Vector2(1070, -28)
+
+[node name="Moeda4" parent="." instance=ExtResource("19_rwqu0")]
+position = Vector2(1046, -28)
+
+[node name="Moeda5" parent="." instance=ExtResource("19_rwqu0")]
+position = Vector2(1016, -26)
+
+[node name="Moeda6" parent="." instance=ExtResource("19_rwqu0")]
+position = Vector2(992, -26)
+
+[node name="Moeda7" parent="." instance=ExtResource("19_rwqu0")]
+position = Vector2(970, -28)
+
+[node name="Moeda8" parent="." instance=ExtResource("19_rwqu0")]
+position = Vector2(946, -28)

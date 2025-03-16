@@ -1,11 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://bu84kxha4aovc"]
+[gd_scene load_steps=29 format=3 uid="uid://dyhmibrtvjqkf"]
 
 [ext_resource type="Script" uid="uid://ccap24upc5vao" path="res://assets/scripts/personagem.gd" id="1_b8pi2"]
 [ext_resource type="Texture2D" uid="uid://d0d6jqhtubm3h" path="res://assets/sprites/player_sprites/spr_personagem_dash_skip3.png" id="2_8tl0k"]
 [ext_resource type="Texture2D" uid="uid://b10vy5h8sovnf" path="res://assets/sprites/player_sprites/spr_personagem_idle_skip4.png" id="2_b8pi2"]
-[ext_resource type="Resource" uid="uid://bu7mtp3oa18s2" path="res://assets/resource/player_inventory.tres" id="2_kfrmc"]
 [ext_resource type="Texture2D" uid="uid://crayndi3obepp" path="res://assets/sprites/player_sprites/spr_personagem_run_skip3.png" id="3_tapgb"]
 [ext_resource type="Texture2D" uid="uid://bhnqe47lajp0c" path="res://assets/sprites/player_sprites/spr_personagem_hit_skip7.png" id="3_y8scl"]
+[ext_resource type="Texture2D" uid="uid://doe17rvahe66v" path="res://assets/sprites/player_sprites/spr_personagem_ataque_skip3.png" id="6_kfrmc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ly6av"]
 atlas = ExtResource("2_8tl0k")
@@ -75,6 +75,18 @@ region = Rect2(32, 0, 32, 32)
 atlas = ExtResource("3_tapgb")
 region = Rect2(64, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3oox"]
+atlas = ExtResource("6_kfrmc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7cwy"]
+atlas = ExtResource("6_kfrmc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgalq"]
+atlas = ExtResource("6_kfrmc")
+region = Rect2(64, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_jhlto"]
 animations = [{
 "frames": [{
@@ -115,7 +127,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"hit",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.7,
@@ -147,6 +159,20 @@ animations = [{
 "loop": true,
 "name": &"run",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3oox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7cwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgalq")
+}],
+"loop": false,
+"name": &"spell",
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b8pi2"]
@@ -156,13 +182,14 @@ height = 16.0
 [node name="Personagem" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_b8pi2")
-inventory = ExtResource("2_kfrmc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_jhlto")
-animation = &"run"
+animation = &"spell"
 autoplay = "idle"
+frame = 2
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_b8pi2")
@@ -174,6 +201,12 @@ one_shot = true
 [node name="DashTimer2" type="Timer" parent="."]
 wait_time = 1.6
 one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="project_position" type="Marker2D" parent="."]
+position = Vector2(9, 0)
 
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="DashTimer2" to="." method="_on_dash_timer_2_timeout"]

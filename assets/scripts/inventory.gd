@@ -13,8 +13,9 @@ func insert(item: InvItem):
 		item_slots[0].quantity += 1
 	else:
 		var empty_slots = slots.filter(func(slot): return slot.item == null)
-		
+
 		if !empty_slots.is_empty():
 			empty_slots[0].item = item
 			empty_slots[0].quantity = 1
+
 	update.emit()

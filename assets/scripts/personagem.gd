@@ -4,13 +4,11 @@ extends CharacterBody2D
 const SPEED = 128.0
 const JUMP_VELOCITY = -246.0
 const DASH_SPEED = 412.0
-const spell = preload("res://assets/scenes/projectile.tscn")
 
-var can_shoot = true
 var dash = false
 var can_dash = true
-var life = 8
-var life_t = 8
+var life = 3
+var life_t = 3
 
 @onready var dash_timer: Timer = $DashTimer
 @onready var dash_timer_2: Timer = $DashTimer2
@@ -18,15 +16,12 @@ var life_t = 8
 
 @export var inventory: Inv
 
-@onready var project_position = $project_position
-
 # -----------Variavel de Estado do player para Animações ------------
 var current_state = player_states.MOVES
 
 enum player_states{
 	MOVES,
 	HIT,
-	SPELL,
 	DEAD
 }
 # --------------Função Principal -------------------------------
@@ -41,8 +36,6 @@ func _physics_process(delta: float) -> void:
 		
 	# Analisa em que estado o Player esta.	
 	match current_state:
-		player_states.SPELL:
-			power()
 		player_states.MOVES:
 			movimentos()
 		player_states.HIT:
@@ -50,12 +43,9 @@ func _physics_process(delta: float) -> void:
 		player_states.DEAD:
 			dead()
 	anim_updated()
-		
 	
 	
 func movimentos():
-	if Input.is_action_just_pressed("spell"):
-		current_state = player_states.SPELL
 	# ------------- Sistema do DASH ---------------------------
 	if Input.is_action_just_pressed("dash") && can_dash:
 		dash = true
@@ -64,14 +54,6 @@ func movimentos():
 		dash_timer_2.start()
 		# Movimentação do personagem
 	var direction = Input.get_axis("move_left", "move_right")
-	
-	if Input.is_action_pressed("move_left"):
-		if sign(project_position.position.x) == 1:
-			project_position.position.x *= -1
-			
-	if Input.is_action_pressed("move_right"):
-		if sign(project_position.position.x) == -1:
-			project_position.position.x *= -1
 	
 	if direction:
 		if dash:
@@ -100,34 +82,18 @@ func movimentos():
 			
 	move_and_slide()
 		
-func power():
-	if not can_shoot:
-		return
-	can_shoot = false
-	
-	var power_instance = spell.instantiate() as Area2D
-	var direction = 1 if sign(project_position.position.x) == 1 else -1
-	power_instance.set("direction", direction)
-	power_instance.position = project_position.global_position
-	get_parent().add_child(power_instance)
-	
-	await animated_sprite.animation_finished
-	can_shoot = true
-	current_state = player_states.MOVES
-	
 	
 #---------------Função - Dano recebido por Player ------------------
 func hit():
-	await get_tree().create_timer(0.6).timeout
+	move_and_slide()
+	await get_tree().create_timer(0.4).timeout
 	current_state = player_states.MOVES
 #---------------Função - Morte do Player -------------------------
 func dead():
-	await get_tree().create_timer(0.6).timeout
+	await get_tree().create_timer(0.4).timeout
 	queue_free()
 #-----------------Função - Animação do Player --------------------
 func anim_updated():
-	if current_state == player_states.SPELL:
-		animated_sprite.play("spell")
 	if current_state == player_states.MOVES:
 		if velocity.x == 0:
 			animated_sprite.play("idle")

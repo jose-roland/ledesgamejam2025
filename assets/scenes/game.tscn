@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bkrwg18nfmjyx" path="res://assets/sprites/Arvore.png" id="11_5newe"]
 [ext_resource type="Texture2D" uid="uid://ckc4niosr6f4e" path="res://assets/sprites/Pedra_Caverna2.png" id="11_dinhu"]
 [ext_resource type="Texture2D" uid="uid://dh884hauxhiss" path="res://assets/sprites/Arvore3.png" id="12_5newe"]
-[ext_resource type="PackedScene" uid="uid://bu84kxha4aovc" path="res://assets/scenes/personagem.tscn" id="19_3cnnv"]
+[ext_resource type="PackedScene" uid="uid://dyhmibrtvjqkf" path="res://assets/scenes/personagem.tscn" id="19_3cnnv"]
 [ext_resource type="PackedScene" uid="uid://cr6knjm315sb6" path="res://assets/scenes/inventory_ui.tscn" id="20_au80e"]
 [ext_resource type="PackedScene" uid="uid://j0nk12semnj0" path="res://assets/scenes/moeda.tscn" id="21_52jqy"]
 
@@ -454,7 +454,7 @@ layer_1/tile_data = PackedInt32Array(-65535, 2, 0, -65534, 2, 0, -65533, 2, 0, -
 [node name="Personagem" parent="." instance=ExtResource("19_3cnnv")]
 position = Vector2(79, -35)
 
-[node name="Camera2D" type="Camera2D" parent="Personagem"]
+[node name="Camera2D2" type="Camera2D" parent="Personagem"]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 

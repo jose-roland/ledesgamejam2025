@@ -144,3 +144,6 @@ func _on_dash_timer_timeout() -> void:
 	dash = false
 func _on_dash_timer_2_timeout() -> void:
 	can_dash = true
+
+func collect(item):
+	inventory.insert(item)

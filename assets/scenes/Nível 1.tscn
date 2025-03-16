@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://7sk162205pg3"]
+[gd_scene load_steps=36 format=4 uid="uid://dp17peula583y"]
 
 [ext_resource type="Texture2D" uid="uid://dg1jvq17dq4ur" path="res://assets/sprites/Dirt.png" id="1_qf5iy"]
 [ext_resource type="Texture2D" uid="uid://cs7k6tuml2ru4" path="res://assets/sprites/Estalaguimite_Grande.png" id="2_yb0rn"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dfuh2y00bld2c" path="res://assets/sprites/Plataforma_Centro.png" id="19_4bx3b"]
 [ext_resource type="Texture2D" uid="uid://bspmow4w7ebxp" path="res://assets/sprites/Plataforma_Direita.png" id="20_nwtyn"]
 [ext_resource type="Texture2D" uid="uid://c5liqt3xgi4a7" path="res://assets/sprites/Plataforma_Esquerda.png" id="21_pr1g3"]
-[ext_resource type="PackedScene" uid="uid://bu84kxha4aovc" path="res://assets/scenes/personagem.tscn" id="23_oopdw"]
+[ext_resource type="PackedScene" uid="uid://dyhmibrtvjqkf" path="res://assets/scenes/personagem.tscn" id="23_oopdw"]
 [ext_resource type="PackedScene" uid="uid://cr6knjm315sb6" path="res://assets/scenes/inventory_ui.tscn" id="24_3gyeo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p2xyf"]
@@ -475,7 +475,7 @@ tile_set = SubResource("TileSet_o3adi")
 [node name="Personagem" parent="." instance=ExtResource("23_oopdw")]
 position = Vector2(1329, -38)
 
-[node name="Camera2D" type="Camera2D" parent="Personagem"]
+[node name="Camera2D2" type="Camera2D" parent="Personagem"]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 

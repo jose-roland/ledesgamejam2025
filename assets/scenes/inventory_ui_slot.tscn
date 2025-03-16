@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cd6w30ch0617j"]
+[gd_scene load_steps=4 format=3 uid="uid://cd6w30ch0617j"]
 
 [ext_resource type="Texture2D" uid="uid://c50euvnfgamlp" path="res://assets/sprites/spr_inventory_slot.png" id="1_jwl8e"]
 [ext_resource type="Script" uid="uid://7ueb1fenwhc2" path="res://assets/scripts/inventory_ui_slot.gd" id="1_pw35r"]
+[ext_resource type="FontFile" uid="uid://ci5t0mehyv5oq" path="res://assets/resource/FonteJogo.tres" id="3_jha5y"]
 
 [node name="InventoryUISlot" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
@@ -15,6 +16,7 @@ texture = ExtResource("1_jwl8e")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
 offset_right = 16.0
 offset_bottom = 16.0
 
@@ -22,3 +24,15 @@ offset_bottom = 16.0
 layout_mode = 2
 
 [node name="ItemDisplay" type="Sprite2D" parent="CenterContainer/Panel"]
+
+[node name="Label" type="Label" parent="CenterContainer/Panel"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 14.0
+offset_bottom = 24.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("3_jha5y")
+theme_override_font_sizes/font_size = 14
+text = "99"
+horizontal_alignment = 2

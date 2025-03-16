@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://7sk162205pg3"]
+[gd_scene load_steps=41 format=3 uid="uid://7sk162205pg3"]
 
 [ext_resource type="Texture2D" uid="uid://cs7k6tuml2ru4" path="res://assets/sprites/Estalaguimite_Grande.png" id="4_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dg1jvq17dq4ur" path="res://assets/sprites/Dirt.png" id="4_vtaks"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dh884hauxhiss" path="res://assets/sprites/Arvore3.png" id="12_5newe"]
 [ext_resource type="PackedScene" uid="uid://bu84kxha4aovc" path="res://assets/scenes/personagem.tscn" id="19_3cnnv"]
 [ext_resource type="PackedScene" uid="uid://cr6knjm315sb6" path="res://assets/scenes/inventory_ui.tscn" id="20_au80e"]
+[ext_resource type="PackedScene" uid="uid://j0nk12semnj0" path="res://assets/scenes/moeda.tscn" id="21_52jqy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dinhu"]
 texture = ExtResource("4_vtaks")
@@ -466,3 +467,30 @@ offset_left = 43.0
 offset_top = 21.0
 offset_right = 119.0
 offset_bottom = 37.0
+
+[node name="Moeda" parent="." instance=ExtResource("21_52jqy")]
+position = Vector2(160, -36)
+
+[node name="Moeda2" parent="." instance=ExtResource("21_52jqy")]
+position = Vector2(187, -36)
+
+[node name="Moeda3" parent="." instance=ExtResource("21_52jqy")]
+position = Vector2(228, -37)
+
+[node name="Moeda4" parent="." instance=ExtResource("21_52jqy")]
+position = Vector2(258, -37)
+
+[node name="Moeda5" parent="." instance=ExtResource("21_52jqy")]
+position = Vector2(285, -37)
+
+[node name="Moeda6" parent="." instance=ExtResource("21_52jqy")]
+position = Vector2(326, -38)
+
+[node name="Moeda7" parent="." instance=ExtResource("21_52jqy")]
+position = Vector2(392, -39)
+
+[node name="Moeda8" parent="." instance=ExtResource("21_52jqy")]
+position = Vector2(419, -39)
+
+[node name="Moeda9" parent="." instance=ExtResource("21_52jqy")]
+position = Vector2(460, -40)

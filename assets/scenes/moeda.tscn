@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://j0nk12semnj0"]
+[gd_scene load_steps=18 format=3 uid="uid://j0nk12semnj0"]
 
 [ext_resource type="Script" uid="uid://dwwon72nlhmrl" path="res://assets/scripts/moeda.gd" id="1_1a84l"]
+[ext_resource type="Resource" uid="uid://dreyuwt3ye3tb" path="res://assets/resource/coin.tres" id="2_43228"]
 [ext_resource type="Texture2D" uid="uid://dm0omjv6mvgxf" path="res://assets/sprites/spr_moeda_skip12.png" id="2_w8fjm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_43228"]
@@ -100,6 +101,7 @@ radius = 6.0
 
 [node name="Moeda" type="Node2D"]
 script = ExtResource("1_1a84l")
+item = ExtResource("2_43228")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(13, 10)
@@ -113,7 +115,7 @@ speed_scale = 1.7
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(13, 10)
+position = Vector2(13, 9)
 shape = SubResource("CircleShape2D_331om")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

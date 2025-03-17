@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cd6w30ch0617j"]
 
-[ext_resource type="Texture2D" uid="uid://c50euvnfgamlp" path="res://assets/sprites/menu_sprites/spr_inventory_slot.png" id="1_jwl8e"]
+[ext_resource type="Texture2D" uid="uid://c50euvnfgamlp" path="res://assets/sprites/spr_inventory_slot.png" id="1_jwl8e"]
 [ext_resource type="Script" uid="uid://7ueb1fenwhc2" path="res://assets/scripts/inventory_ui_slot.gd" id="1_pw35r"]
 [ext_resource type="FontFile" uid="uid://ci5t0mehyv5oq" path="res://assets/resource/FonteJogo.tres" id="3_jha5y"]
 

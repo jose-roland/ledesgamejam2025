@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://dp17peula583y"]
+[gd_scene load_steps=45 format=4 uid="uid://dp17peula583y"]
 
 [ext_resource type="Texture2D" uid="uid://dg1jvq17dq4ur" path="res://assets/sprites/Dirt.png" id="1_xu7ce"]
 [ext_resource type="Texture2D" uid="uid://cs7k6tuml2ru4" path="res://assets/sprites/Estalaguimite_Grande.png" id="2_l8htj"]
@@ -23,7 +23,9 @@
 [ext_resource type="AudioStream" uid="uid://bdp5jqilrwj6k" path="res://assets/resource/Audios/Audio_Moeda_2.wav" id="20_gwe26"]
 [ext_resource type="PackedScene" uid="uid://j0nk12semnj0" path="res://assets/scenes/moeda.tscn" id="20_l8htj"]
 [ext_resource type="PackedScene" uid="uid://bapqmjs2ycrbw" path="res://assets/scenes/slime_enemy.tscn" id="21_mcit5"]
+[ext_resource type="PackedScene" uid="uid://c5rxde3lwbmcm" path="res://assets/scenes/speed_boost.tscn" id="23_gvwou"]
 [ext_resource type="AudioStream" uid="uid://dp83hfikungdl" path="res://assets/resource/Audios/Audio_Fundo_Nivel1.mp3" id="24_gwe26"]
+[ext_resource type="PackedScene" uid="uid://d3hxb1rhweob8" path="res://assets/scenes/jump_boost.tscn" id="24_q6l1j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p2xyf"]
 texture = ExtResource("1_xu7ce")
@@ -499,7 +501,7 @@ position = Vector2(2996, -173)
 stream = ExtResource("18_ity8k")
 
 [node name="Personagem" parent="." instance=ExtResource("18_jxy2c")]
-position = Vector2(170, -122)
+position = Vector2(179, -31)
 
 [node name="Camera2D2" type="Camera2D" parent="Personagem"]
 zoom = Vector2(4, 4)
@@ -541,7 +543,31 @@ position = Vector2(2142, -58)
 position = Vector2(2958, -170)
 
 [node name="Moeda6" parent="Moedas" instance=ExtResource("20_l8htj")]
-position = Vector2(-242, -282)
+position = Vector2(-242, -283)
+
+[node name="Moeda7" parent="Moedas" instance=ExtResource("23_gvwou")]
+position = Vector2(-130, -187)
+
+[node name="Moeda8" parent="Moedas" instance=ExtResource("23_gvwou")]
+position = Vector2(422, -27)
+
+[node name="Moeda10" parent="Moedas" instance=ExtResource("24_q6l1j")]
+position = Vector2(1277, -26)
+
+[node name="Moeda11" parent="Moedas" instance=ExtResource("23_gvwou")]
+position = Vector2(2702, 342)
+
+[node name="Moeda12" parent="Moedas" instance=ExtResource("24_q6l1j")]
+position = Vector2(2302, 134)
+
+[node name="Moeda13" parent="Moedas" instance=ExtResource("24_q6l1j")]
+position = Vector2(3083, 215)
+
+[node name="Moeda14" parent="Moedas" instance=ExtResource("23_gvwou")]
+position = Vector2(2251, -89)
+
+[node name="Moeda15" parent="Moedas" instance=ExtResource("20_l8htj")]
+position = Vector2(2679, -106)
 
 [node name="Slimes" type="Node" parent="."]
 

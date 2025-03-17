@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://b28rrmhi1j46w"]
+
+[ext_resource type="Script" uid="uid://da7jxsh2yd4ei" path="res://assets/scripts/inventory_item.gd" id="1_3who4"]
+[ext_resource type="Texture2D" uid="uid://bxvmm4e8w5ay1" path="res://assets/sprites/temp_sprites/spr_speed_boost_icon.png" id="2_2l2pi"]
+
+[resource]
+script = ExtResource("1_3who4")
+name = "speed_boost"
+texture = ExtResource("2_2l2pi")
+metadata/_custom_type_script = "uid://da7jxsh2yd4ei"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://5qmcxdlu5p81"]
+
+[ext_resource type="Script" uid="uid://da7jxsh2yd4ei" path="res://assets/scripts/inventory_item.gd" id="1_bnihm"]
+[ext_resource type="Texture2D" uid="uid://rqckic8hcjx3" path="res://assets/sprites/temp_sprites/spr_jump_boost_icon.png" id="2_vv311"]
+
+[resource]
+script = ExtResource("1_bnihm")
+name = "jump_boost"
+texture = ExtResource("2_vv311")
+metadata/_custom_type_script = "uid://da7jxsh2yd4ei"

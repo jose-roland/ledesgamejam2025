@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 128.0
-const JUMP_VELOCITY = -246.0
+var speed = 128.0
+var jump_velocity = -246.0
 const DASH_SPEED = 412.0
 const spell = preload("res://assets/scenes/projectile.tscn")
 
@@ -32,6 +32,11 @@ enum player_states{
 	SPELL,
 	DEAD
 }
+
+func _ready() -> void:
+	set_speed(128.0)
+	set_jump_velocity(-256.0)
+	
 # --------------Função Principal -------------------------------
 func _physics_process(delta: float) -> void:
 	# Adição da Gravidade
@@ -80,9 +85,9 @@ func movimentos():
 		if dash:
 			velocity.x = direction * DASH_SPEED
 		else:
-			velocity.x = direction * SPEED
+			velocity.x = direction * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
 	#----------------------------------------------------------
 	# Mudança de Animação da Direção do movimento
 	if direction > 0:
@@ -119,7 +124,7 @@ func movimentos():
 # Função de pular
 func jump() -> void:
 	if is_on_floor() || can_coyote_jump:
-		velocity.y = JUMP_VELOCITY
+		velocity.y = jump_velocity
 		
 		if can_coyote_jump:
 			can_coyote_jump = false
@@ -182,3 +187,14 @@ func _on_dash_timer_2_timeout() -> void:
 func collect(item):
 	inventory.insert(item)
 	
+func set_speed(new_speed: float):
+	speed = new_speed
+	
+func increase_speed(quantity: float):
+	speed += quantity
+	
+func set_jump_velocity(new_jump_velocity: float):
+	jump_velocity = new_jump_velocity
+
+func increase_jump_velocity(quantity: float):
+	jump_velocity -= quantity

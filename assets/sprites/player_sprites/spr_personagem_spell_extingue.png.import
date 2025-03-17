@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bspmow4w7ebxp"
-path="res://.godot/imported/Plataforma_Direita.png-d060d02e1bf686992c3fb577111d3775.ctex"
+uid="uid://d3wp8qi6ynmka"
+path="res://.godot/imported/spr_personagem_spell_extingue.png-28fb9d276e0848bb9ff37ffe6313c94f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Plataforma_Direita.png"
-dest_files=["res://.godot/imported/Plataforma_Direita.png-d060d02e1bf686992c3fb577111d3775.ctex"]
+source_file="res://assets/sprites/player_sprites/spr_personagem_spell_extingue.png"
+dest_files=["res://.godot/imported/spr_personagem_spell_extingue.png-28fb9d276e0848bb9ff37ffe6313c94f.ctex"]
 
 [params]
 

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Audio_Fundo_Nivel2.mp3-48c1284c05b844f33a5436
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

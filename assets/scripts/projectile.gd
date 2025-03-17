@@ -1,6 +1,6 @@
 extends Area2D
 
-const SPEED := 100 
+var SPEED := 100 
 
 var projectile_speed := Vector2.ZERO
 var direction := 1
@@ -17,6 +17,9 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("inimigos"):
 		body.levar_dano()
+	SPEED = 0
+	$AnimatedSprite2D.play("extingue")
+	await get_tree().create_timer(0.3).timeout
 	queue_free()
 
 

@@ -180,7 +180,7 @@ animations = [{
 radius = 5.0
 height = 16.0
 
-[node name="Personagem" type="CharacterBody2D"]
+[node name="Personagem" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_b8pi2")
 inventory = ExtResource("2_jhlto")

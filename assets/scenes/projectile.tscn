@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://ud5n1ol20k8h"]
+[gd_scene load_steps=13 format=3 uid="uid://ud5n1ol20k8h"]
 
 [ext_resource type="Script" uid="uid://b54g7bcur2pyw" path="res://assets/scripts/projectile.gd" id="1_scc3m"]
 [ext_resource type="Texture2D" uid="uid://br8auqe7be12w" path="res://assets/sprites/player_sprites/poder.png" id="2_ldy4p"]
+[ext_resource type="Texture2D" uid="uid://d3wp8qi6ynmka" path="res://assets/sprites/player_sprites/spr_personagem_spell_extingue.png" id="3_ldy4p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxf0c"]
 atlas = ExtResource("2_ldy4p")
@@ -18,6 +19,18 @@ region = Rect2(32, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_2xblw"]
 atlas = ExtResource("2_ldy4p")
 region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajs7r"]
+atlas = ExtResource("3_ldy4p")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc7ey"]
+atlas = ExtResource("3_ldy4p")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_db1ja"]
+atlas = ExtResource("3_ldy4p")
+region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dac07"]
 animations = [{
@@ -37,6 +50,20 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajs7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fc7ey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_db1ja")
+}],
+"loop": true,
+"name": &"extingue",
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0c7x6"]
@@ -49,6 +76,7 @@ script = ExtResource("1_scc3m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dac07")
+animation = &"extingue"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

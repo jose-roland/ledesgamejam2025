@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bclgvo08wijdh"]
+
+[ext_resource type="Script" uid="uid://ch7xjqbe1j7mc" path="res://assets/scripts/proj_slime.gd" id="1_ipdcy"]
+[ext_resource type="Texture2D" uid="uid://p6secpqssat3" path="res://assets/sprites/enemy_sprites_boss/spr_slime_boss_power.png" id="2_bjqsh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vj2do"]
+radius = 7.0
+
+[node name="proj_slime" type="Area2D"]
+collision_mask = 3
+script = ExtResource("1_ipdcy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bjqsh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vj2do")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(0.7, 0.65)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

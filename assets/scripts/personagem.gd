@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 var speed = 128.0
-var jump_velocity = -246.0
+var jump_velocity = -256.0
 const DASH_SPEED = 412.0
 const spell = preload("res://assets/scenes/projectile.tscn")
 
@@ -162,8 +162,13 @@ func hit():
 #---------------Função - Morte do Player -------------------------
 func dead():
 	await get_tree().create_timer(0.8).timeout
+	for slot in inventory.slots:
+		slot.item = null
+		slot.quantity = 0
+	inventory = Inv.new() 
 	get_tree().reload_current_scene()
-	queue_free()
+	set_speed(128.0)
+	set_jump_velocity(-256.0)
 #-----------------Função - Animação do Player --------------------
 func anim_updated():
 	if current_state == player_states.SPELL:

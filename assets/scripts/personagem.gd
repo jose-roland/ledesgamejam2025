@@ -168,13 +168,15 @@ func hit():
 #---------------Função - Morte do Player -------------------------
 func dead():
 	await get_tree().create_timer(0.8).timeout
-	for slot in inventory.slots:
-		slot.item = null
-		slot.quantity = 0
-	inventory = Inv.new() 
+	if get_tree().current_scene.scene_file_path == "res://assets/scenes/Nivel_1.tscn":
+		for slot in inventory.slots:
+			slot.item = null
+			slot.quantity = 0
+		inventory = Inv.new() 
 	get_tree().reload_current_scene()
 	set_speed(128.0)
 	set_jump_velocity(-256.0)
+
 #-----------------Função - Animação do Player --------------------
 func anim_updated():
 	if current_state == player_states.SPELL:

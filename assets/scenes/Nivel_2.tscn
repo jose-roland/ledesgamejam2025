@@ -1,32 +1,34 @@
-[gd_scene load_steps=54 format=3 uid="uid://cvlm2n3sxoqkv"]
+[gd_scene load_steps=56 format=3 uid="uid://cvlm2n3sxoqkv"]
 
-[ext_resource type="Texture2D" uid="uid://dmyoqfnvy45kc" path="res://assets/sprites/menu_sprites/Detalhe_Boss.png" id="1_qrast"]
-[ext_resource type="Texture2D" uid="uid://dg1jvq17dq4ur" path="res://assets/sprites/tile_map_sprites/Dirt.png" id="2_v7ly0"]
-[ext_resource type="Texture2D" uid="uid://cs7k6tuml2ru4" path="res://assets/sprites/map_detail_sprites/Estalaguimite_Grande.png" id="3_ohll1"]
-[ext_resource type="Texture2D" uid="uid://barnqm8ex3fem" path="res://assets/sprites/map_detail_sprites/Estalaguimite_Pequena.png" id="4_6y1n8"]
-[ext_resource type="Texture2D" uid="uid://nn8m1dnkdrxq" path="res://assets/sprites/map_detail_sprites/Estalaguitite_Grande.png" id="5_v8png"]
-[ext_resource type="Texture2D" uid="uid://te0osunc730r" path="res://assets/sprites/map_detail_sprites/Estalaguitite_Pequena.png" id="6_xicji"]
-[ext_resource type="Texture2D" uid="uid://dv8xwu8r8tyiq" path="res://assets/sprites/map_detail_sprites/Nuvem.png" id="7_ut173"]
-[ext_resource type="Texture2D" uid="uid://ba14s77wdesbt" path="res://assets/sprites/map_detail_sprites/Ceu.png" id="8_3n1vk"]
-[ext_resource type="Texture2D" uid="uid://btnet3teye6ge" path="res://assets/sprites/map_detail_sprites/Arvore2.png" id="9_m24kv"]
-[ext_resource type="Texture2D" uid="uid://bkrwg18nfmjyx" path="res://assets/sprites/map_detail_sprites/Arvore.png" id="10_70nk1"]
-[ext_resource type="Texture2D" uid="uid://dh884hauxhiss" path="res://assets/sprites/map_detail_sprites/Arvore3.png" id="11_vvww2"]
-[ext_resource type="Texture2D" uid="uid://d0fcuinx4y76y" path="res://assets/sprites/tile_map_sprites/Grass1.png" id="12_a3e5t"]
-[ext_resource type="Texture2D" uid="uid://bl806sps48pgt" path="res://assets/sprites/menu_sprites/Detalhe_Boss2.png" id="13_v7ly0"]
-[ext_resource type="Texture2D" uid="uid://b64yh1d0qivol" path="res://assets/sprites/tile_map_sprites/Pedras_Caverna.png" id="15_l6iu5"]
-[ext_resource type="Texture2D" uid="uid://2p7ys4v4q3ix" path="res://assets/sprites/tile_map_sprites/Pedra1.png" id="16_nydwb"]
-[ext_resource type="Texture2D" uid="uid://bomtf4d6s5qou" path="res://assets/sprites/tile_map_sprites/Pedra_Caverna.png" id="17_nb4ie"]
-[ext_resource type="Texture2D" uid="uid://c2aq031aan3kv" path="res://assets/sprites/map_detail_sprites/Porta_Boss.png" id="17_ohll1"]
-[ext_resource type="Texture2D" uid="uid://cccsru82f5vhh" path="res://assets/sprites/tile_map_sprites/Pedra_Caverna_Baixo.png" id="18_aont8"]
-[ext_resource type="Texture2D" uid="uid://dfuh2y00bld2c" path="res://assets/sprites/tile_map_sprites/Plataforma_Centro.png" id="19_rg7b1"]
-[ext_resource type="Texture2D" uid="uid://bspmow4w7ebxp" path="res://assets/sprites/tile_map_sprites/Plataforma_Direita.png" id="20_rb3aq"]
-[ext_resource type="Texture2D" uid="uid://c5liqt3xgi4a7" path="res://assets/sprites/tile_map_sprites/Plataforma_Esquerda.png" id="21_8sbjm"]
-[ext_resource type="Texture2D" uid="uid://ckc4niosr6f4e" path="res://assets/sprites/tile_map_sprites/Pedra_Caverna2.png" id="22_m42on"]
+[ext_resource type="Texture2D" uid="uid://dmyoqfnvy45kc" path="res://assets/sprites/Detalhe_Boss.png" id="1_qrast"]
+[ext_resource type="Texture2D" uid="uid://dg1jvq17dq4ur" path="res://assets/sprites/Dirt.png" id="2_v7ly0"]
+[ext_resource type="Texture2D" uid="uid://cs7k6tuml2ru4" path="res://assets/sprites/Estalaguimite_Grande.png" id="3_ohll1"]
+[ext_resource type="Texture2D" uid="uid://barnqm8ex3fem" path="res://assets/sprites/Estalaguimite_Pequena.png" id="4_6y1n8"]
+[ext_resource type="Texture2D" uid="uid://nn8m1dnkdrxq" path="res://assets/sprites/Estalaguitite_Grande.png" id="5_v8png"]
+[ext_resource type="Texture2D" uid="uid://te0osunc730r" path="res://assets/sprites/Estalaguitite_Pequena.png" id="6_xicji"]
+[ext_resource type="Texture2D" uid="uid://dv8xwu8r8tyiq" path="res://assets/sprites/Nuvem.png" id="7_ut173"]
+[ext_resource type="Texture2D" uid="uid://ba14s77wdesbt" path="res://assets/sprites/Ceu.png" id="8_3n1vk"]
+[ext_resource type="Texture2D" uid="uid://btnet3teye6ge" path="res://assets/sprites/Arvore2.png" id="9_m24kv"]
+[ext_resource type="Texture2D" uid="uid://bkrwg18nfmjyx" path="res://assets/sprites/Arvore.png" id="10_70nk1"]
+[ext_resource type="Texture2D" uid="uid://dh884hauxhiss" path="res://assets/sprites/Arvore3.png" id="11_vvww2"]
+[ext_resource type="Texture2D" uid="uid://d0fcuinx4y76y" path="res://assets/sprites/Grass1.png" id="12_a3e5t"]
+[ext_resource type="Texture2D" uid="uid://bl806sps48pgt" path="res://assets/sprites/Detalhe_Boss2.png" id="13_v7ly0"]
+[ext_resource type="Texture2D" uid="uid://b64yh1d0qivol" path="res://assets/sprites/Pedras_Caverna.png" id="15_l6iu5"]
+[ext_resource type="Texture2D" uid="uid://2p7ys4v4q3ix" path="res://assets/sprites/Pedra1.png" id="16_nydwb"]
+[ext_resource type="Texture2D" uid="uid://bomtf4d6s5qou" path="res://assets/sprites/Pedra_Caverna.png" id="17_nb4ie"]
+[ext_resource type="Texture2D" uid="uid://c2aq031aan3kv" path="res://assets/sprites/Porta_Boss.png" id="17_ohll1"]
+[ext_resource type="Texture2D" uid="uid://cccsru82f5vhh" path="res://assets/sprites/Pedra_Caverna_Baixo.png" id="18_aont8"]
+[ext_resource type="Texture2D" uid="uid://dfuh2y00bld2c" path="res://assets/sprites/Plataforma_Centro.png" id="19_rg7b1"]
+[ext_resource type="Texture2D" uid="uid://bspmow4w7ebxp" path="res://assets/sprites/Plataforma_Direita.png" id="20_rb3aq"]
+[ext_resource type="Texture2D" uid="uid://c5liqt3xgi4a7" path="res://assets/sprites/Plataforma_Esquerda.png" id="21_8sbjm"]
+[ext_resource type="Texture2D" uid="uid://ckc4niosr6f4e" path="res://assets/sprites/Pedra_Caverna2.png" id="22_m42on"]
 [ext_resource type="PackedScene" uid="uid://dyhmibrtvjqkf" path="res://assets/scenes/personagem.tscn" id="23_v7ly0"]
 [ext_resource type="Script" uid="uid://dj2j5bwxn2i12" path="res://assets/scripts/porta.gd" id="24_ohll1"]
-[ext_resource type="PackedScene" path="res://assets/scenes/inventory_ui.tscn" id="25_6y1n8"]
+[ext_resource type="PackedScene" uid="uid://cr6knjm315sb6" path="res://assets/scenes/inventory_ui.tscn" id="25_6y1n8"]
 [ext_resource type="PackedScene" uid="uid://cq45llx3k6xec" path="res://assets/scenes/slime_enemy_Boss.tscn" id="26_v8png"]
+[ext_resource type="Script" uid="uid://bhb3x02awsr2m" path="res://assets/scenes/slime_enemy_boss.gd" id="27_ut173"]
 [ext_resource type="PackedScene" uid="uid://bapqmjs2ycrbw" path="res://assets/scenes/slime_enemy.tscn" id="27_xicji"]
+[ext_resource type="AudioStream" uid="uid://bpthrk7iu3jpk" path="res://assets/resource/Audios/Audio_Fundo_Nivel2.mp3" id="29_3n1vk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ppjyy"]
 texture = ExtResource("1_qrast")
@@ -8084,12 +8086,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="slime_enemy_boss" parent="." instance=ExtResource("26_v8png")]
 position = Vector2(1596, 898)
+script = ExtResource("27_ut173")
 
 [node name="slime_enemy" parent="." instance=ExtResource("27_xicji")]
 position = Vector2(397, 511)
 
 [node name="slime_enemy2" parent="." instance=ExtResource("27_xicji")]
 position = Vector2(794, 527)
+
+[node name="Audio_Fundo_Nivel2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1352, 444)
+stream = ExtResource("29_3n1vk")
+volume_db = -4.952
+autoplay = true
+max_distance = 4096.0
+panning_strength = 3.0
 
 [connection signal="body_entered" from="Porta" to="Porta" method="_on_body_entered"]
 [connection signal="body_exited" from="Porta" to="Porta" method="_on_body_exited"]

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var life = 3
+var life = 5
 var speed = 30
 var direction = 1
 

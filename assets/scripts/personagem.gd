@@ -114,6 +114,9 @@ func movimentos():
 	if was_on_floor && !is_on_floor() && velocity.y >= 0:
 		can_coyote_jump = true
 		coyote_timer.start()
+		
+func levar_dano():
+	life -= 1
 
 	
 	# Se o personagem tocou o chão

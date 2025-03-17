@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://c20kujaguqpm4"]
+[gd_scene load_steps=56 format=3 uid="uid://bqmxjh7y54el4"]
 
 [ext_resource type="Texture2D" uid="uid://dmyoqfnvy45kc" path="res://assets/sprites/menu_sprites/Detalhe_Boss.png" id="1_qrast"]
 [ext_resource type="Texture2D" uid="uid://dg1jvq17dq4ur" path="res://assets/sprites/tile_map_sprites/Dirt.png" id="2_v7ly0"]
@@ -8085,7 +8085,7 @@ offset_bottom = 37.0
 metadata/_edit_use_anchors_ = true
 
 [node name="slime_enemy_Boss" parent="." instance=ExtResource("26_v8png")]
-position = Vector2(1673, 898)
+position = Vector2(1621, 898)
 script = ExtResource("27_ut173")
 
 [node name="slime_enemy" parent="." instance=ExtResource("27_xicji")]

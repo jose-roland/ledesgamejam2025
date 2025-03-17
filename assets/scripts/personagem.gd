@@ -161,7 +161,8 @@ func hit():
 	current_state = player_states.MOVES
 #---------------Função - Morte do Player -------------------------
 func dead():
-	await get_tree().create_timer(0.6).timeout
+	await get_tree().create_timer(0.8).timeout
+	get_tree().reload_current_scene()
 	queue_free()
 #-----------------Função - Animação do Player --------------------
 func anim_updated():

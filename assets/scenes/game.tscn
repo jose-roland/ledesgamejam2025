@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://ckc4niosr6f4e" path="res://assets/sprites/tile_map_sprites/Pedra_Caverna2.png" id="11_dinhu"]
 [ext_resource type="Texture2D" uid="uid://dh884hauxhiss" path="res://assets/sprites/map_detail_sprites/Arvore3.png" id="12_5newe"]
 [ext_resource type="PackedScene" uid="uid://dyhmibrtvjqkf" path="res://assets/scenes/personagem.tscn" id="19_3cnnv"]
-[ext_resource type="PackedScene" path="res://assets/scenes/inventory_ui.tscn" id="20_au80e"]
+[ext_resource type="PackedScene" uid="uid://cr6knjm315sb6" path="res://assets/scenes/inventory_ui.tscn" id="20_au80e"]
 [ext_resource type="PackedScene" uid="uid://j0nk12semnj0" path="res://assets/scenes/moeda.tscn" id="21_52jqy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dinhu"]

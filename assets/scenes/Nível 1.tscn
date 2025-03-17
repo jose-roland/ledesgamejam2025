@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bspmow4w7ebxp" path="res://assets/sprites/tile_map_sprites/Plataforma_Direita.png" id="20_nwtyn"]
 [ext_resource type="Texture2D" uid="uid://c5liqt3xgi4a7" path="res://assets/sprites/tile_map_sprites/Plataforma_Esquerda.png" id="21_pr1g3"]
 [ext_resource type="PackedScene" uid="uid://dyhmibrtvjqkf" path="res://assets/scenes/personagem.tscn" id="23_oopdw"]
-[ext_resource type="PackedScene" path="res://assets/scenes/inventory_ui.tscn" id="24_3gyeo"]
+[ext_resource type="PackedScene" uid="uid://cr6knjm315sb6" path="res://assets/scenes/inventory_ui.tscn" id="24_3gyeo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p2xyf"]
 texture = ExtResource("1_qf5iy")

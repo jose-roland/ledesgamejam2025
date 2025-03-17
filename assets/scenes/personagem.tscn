@@ -211,6 +211,11 @@ position = Vector2(9, 0)
 wait_time = 0.16
 one_shot = true
 
+[node name="JumpBufferTimer" type="Timer" parent="."]
+wait_time = 0.16
+one_shot = true
+
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="DashTimer2" to="." method="_on_dash_timer_2_timeout"]
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
+[connection signal="timeout" from="JumpBufferTimer" to="." method="_on_jump_buffer_timer_timeout"]

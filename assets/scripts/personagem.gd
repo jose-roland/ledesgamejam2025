@@ -10,6 +10,7 @@ var can_dash = true
 var can_coyote_jump := false
 var can_shoot = true
 var dash = false
+var jump_buffered := false
 var life = 8
 var life_t = 8
 
@@ -17,6 +18,7 @@ var life_t = 8
 @onready var coyote_timer: Timer = $CoyoteTimer
 @onready var dash_timer: Timer = $DashTimer
 @onready var dash_timer_2: Timer = $DashTimer2
+@onready var jump_buffer_timer: Timer = $JumpBufferTimer
 @onready var project_position = $project_position
 
 @export var inventory: Inv
@@ -90,11 +92,7 @@ func movimentos():
 
 	# Ação de Pular
 	if Input.is_action_just_pressed("jump"):
-		if is_on_floor() || can_coyote_jump:
-			velocity.y = JUMP_VELOCITY
-			
-			if can_coyote_jump:
-				can_coyote_jump = false
+		jump()
 
 	# Teste para ver se o player perdeu vida, e se ele morreu.
 	if life_t != life:
@@ -107,13 +105,34 @@ func movimentos():
 	
 	move_and_slide()
 	
+	# Se o personagem começou a cair
 	if was_on_floor && !is_on_floor() && velocity.y >= 0:
 		can_coyote_jump = true
 		coyote_timer.start()
+	
+	# Se o personagem tocou o chão
+	if !was_on_floor && is_on_floor():
+		if jump_buffered: # Jump buffer
+			jump_buffered = false
+			jump()
 
+# Função de pular
+func jump() -> void:
+	if is_on_floor() || can_coyote_jump:
+		velocity.y = JUMP_VELOCITY
+		
+		if can_coyote_jump:
+			can_coyote_jump = false
+	else:
+		if !jump_buffered:
+			jump_buffered = true
+			jump_buffer_timer.start()
 func _on_coyote_timer_timeout() -> void:
 	can_coyote_jump = false
 
+func _on_jump_buffer_timer_timeout() -> void:
+	jump_buffered = false
+	
 func power():
 	if not can_shoot:
 		return
@@ -162,3 +181,4 @@ func _on_dash_timer_2_timeout() -> void:
 
 func collect(item):
 	inventory.insert(item)
+	

@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddrhxar0tgjoq"]
+
+[ext_resource type="FontFile" uid="uid://ci5t0mehyv5oq" path="res://assets/resource/FonteJogo.tres" id="1_ijol0"]
+[ext_resource type="PackedScene" uid="uid://ud5n1ol20k8h" path="res://assets/scenes/projectile.tscn" id="1_qi7v0"]
+[ext_resource type="Script" uid="uid://dbkjimejoasqh" path="res://assets/scenes/projectile_Mensagem_Vitoria.gd" id="2_faj36"]
+
+[node name="MensagemVitoria" type="Node2D"]
+
+[node name="Mensagem_Vitoria2" type="Label" parent="."]
+offset_left = 1660.13
+offset_top = 815.197
+offset_right = 1912.13
+offset_bottom = 838.197
+scale = Vector2(1.00886, 1)
+theme_override_colors/font_color = Color(0.501961, 0.176471, 0.176471, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.188235, 0.188235, 1)
+theme_override_fonts/font = ExtResource("1_ijol0")
+theme_override_font_sizes/font_size = 18
+text = "You   Win   !"
+
+[node name="projectile" parent="." instance=ExtResource("1_qi7v0")]
+position = Vector2(1768, 912)
+rotation = -1.57079
+script = ExtResource("2_faj36")
+
+[node name="projectile2" parent="." instance=ExtResource("1_qi7v0")]
+position = Vector2(1800, 912)
+rotation = -1.57079
+script = ExtResource("2_faj36")
+
+[node name="projectile3" parent="." instance=ExtResource("1_qi7v0")]
+position = Vector2(1832, 912)
+rotation = -1.57079
+script = ExtResource("2_faj36")
+
+[node name="projectile4" parent="." instance=ExtResource("1_qi7v0")]
+position = Vector2(1632, 912)
+rotation = -1.57079
+script = ExtResource("2_faj36")
+
+[node name="projectile5" parent="." instance=ExtResource("1_qi7v0")]
+position = Vector2(1600, 912)
+rotation = -1.57079
+script = ExtResource("2_faj36")
+
+[node name="projectile6" parent="." instance=ExtResource("1_qi7v0")]
+position = Vector2(1568, 912)
+rotation = -1.57079
+script = ExtResource("2_faj36")
+
+[node name="projectile7" parent="." instance=ExtResource("1_qi7v0")]
+position = Vector2(1864, 912)
+rotation = -1.57079
+script = ExtResource("2_faj36")
+
+[node name="projectile8" parent="." instance=ExtResource("1_qi7v0")]
+position = Vector2(1896, 912)
+rotation = -1.57079
+script = ExtResource("2_faj36")
+
+[node name="projectile9" parent="." instance=ExtResource("1_qi7v0")]
+position = Vector2(1536, 912)
+rotation = -1.57079
+script = ExtResource("2_faj36")
+
+[node name="projectile10" parent="." instance=ExtResource("1_qi7v0")]
+position = Vector2(1504, 912)
+rotation = -1.57079
+script = ExtResource("2_faj36")

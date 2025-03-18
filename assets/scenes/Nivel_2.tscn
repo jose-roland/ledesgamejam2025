@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://ckc4niosr6f4e" path="res://assets/sprites/tile_map_sprites/Pedra_Caverna2.png" id="22_m42on"]
 [ext_resource type="PackedScene" uid="uid://dyhmibrtvjqkf" path="res://assets/scenes/personagem.tscn" id="23_v7ly0"]
 [ext_resource type="Script" uid="uid://dj2j5bwxn2i12" path="res://assets/scripts/porta.gd" id="24_ohll1"]
-[ext_resource type="PackedScene" path="res://assets/scenes/inventory_ui.tscn" id="25_6y1n8"]
+[ext_resource type="PackedScene" uid="uid://cr6knjm315sb6" path="res://assets/scenes/inventory_ui.tscn" id="25_6y1n8"]
 [ext_resource type="PackedScene" uid="uid://cq45llx3k6xec" path="res://assets/scenes/slime_enemy_Boss.tscn" id="26_v8png"]
 [ext_resource type="Script" uid="uid://mq87dc2bm1qm" path="res://assets/scripts/slime_enemy_boss.gd" id="27_ut173"]
 [ext_resource type="PackedScene" uid="uid://bapqmjs2ycrbw" path="res://assets/scenes/slime_enemy.tscn" id="27_xicji"]
@@ -8067,7 +8067,7 @@ position = Vector2(59, 504)
 texture = ExtResource("17_ohll1")
 
 [node name="Personagem" parent="." instance=ExtResource("23_v7ly0")]
-position = Vector2(110, 507)
+position = Vector2(59, 520)
 
 [node name="Camera2D2" type="Camera2D" parent="Personagem"]
 zoom = Vector2(4, 4)
@@ -8085,7 +8085,7 @@ offset_bottom = 37.0
 metadata/_edit_use_anchors_ = true
 
 [node name="slime_enemy_Boss" parent="." instance=ExtResource("26_v8png")]
-position = Vector2(1621, 898)
+position = Vector2(1671, 898)
 script = ExtResource("27_ut173")
 
 [node name="slime_enemy" parent="." instance=ExtResource("27_xicji")]

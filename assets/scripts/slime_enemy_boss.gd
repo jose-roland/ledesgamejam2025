@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 		visao.target_position = Vector2(140, 0)
 	position.x += speed * delta * direction
 	check_collision_raycast()
-	
+		
 func check_collision_raycast():
 	var collider = visao.get_collider()
 	if collider and collider.is_in_group("player"):
@@ -47,8 +47,14 @@ func ataque():
 func levar_dano():
 	life -= 1
 	if life <= 0:
+		print("Morreu")
+		Mensagem_Vitoria()
 		queue_free()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	body.life -= 1
 	pass # Replace with function body.
+
+func Mensagem_Vitoria():
+	var mensagem_vitoria = preload("res://assets/scenes/Mensagem_Vitoria.tscn").instantiate()
+	get_tree().current_scene.add_child(mensagem_vitoria)
